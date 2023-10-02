@@ -22,7 +22,7 @@ public class PersonBuilder {
         return this;
     }
 
-    public PersonBuilder setAge(Integer age) {
+    public PersonBuilder setAge(Integer age) {  //установить возраст
         if (age < 0) {
             throw new IllegalStateException("Не верно указан возраст");
         } else {
@@ -39,7 +39,7 @@ public class PersonBuilder {
 
     public Person build() {
         Person person;
-        person = new Person(name, surname, age, address);
+        person = new Person(age); //name, surname,address
         return person;
     }
 }
