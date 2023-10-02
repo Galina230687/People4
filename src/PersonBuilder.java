@@ -39,7 +39,7 @@ public class PersonBuilder {
 
     public Person build() {
         Person person;
-        person = new Person(age); //name, surname,address
+        person = new Person(name, surname, age, address);
         return person;
     }
 }
