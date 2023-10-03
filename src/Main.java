@@ -15,17 +15,18 @@ public class Main {
 
         try {
             // Не хватает обязательных полей
-            new PersonBuilder().setSurname(mom.surname).build();
+            new PersonBuilder().setName("Вольф").build();
         } catch (IllegalStateException e) {
             e.printStackTrace();
         }
 
         try {
             // Возраст не верный
-            new PersonBuilder().setAge(mom.age).build();
+            new PersonBuilder().setAge(-100).build();
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
     }
 }
+
 
